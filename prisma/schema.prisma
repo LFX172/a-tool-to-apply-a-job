@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model ExperimentReport {
+  id        Int      @id @default(autoincrement())
+  fileName  String
+  rawText   String
+  aiResult  String
+  createdAt DateTime @default(now())
+}
+
+model ProjectPlan {
+  id        Int      @id @default(autoincrement())
+  direction String               // 用户选中的方向（截取前500字）
+  planText  String               // AI 生成的完整规划 + 路线图
+  createdAt DateTime @default(now())
+}
+
+model TailoredResume {
+  id        Int      @id @default(autoincrement())
+  resume    String               // 用户输入的原始简历
+  jd        String               // 岗位 JD
+  result    String               // AI 输出的定制简历 + 调整说明
+  createdAt DateTime @default(now())
+}

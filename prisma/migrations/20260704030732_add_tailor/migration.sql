@@ -1,0 +1,8 @@
+-- CreateTable
+CREATE TABLE "TailoredResume" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "resume" TEXT NOT NULL,
+    "jd" TEXT NOT NULL,
+    "result" TEXT NOT NULL,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

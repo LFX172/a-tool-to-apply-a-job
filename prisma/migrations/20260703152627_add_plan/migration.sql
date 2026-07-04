@@ -1,0 +1,7 @@
+-- CreateTable
+CREATE TABLE "ProjectPlan" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "direction" TEXT NOT NULL,
+    "planText" TEXT NOT NULL,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
